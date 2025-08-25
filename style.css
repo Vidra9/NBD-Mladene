@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Trajan Pro Regular';
+    src: url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.eot');
+    src: url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.eot?#iefix') format('embedded-opentype'),
+        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.woff2') format('woff2'),
+        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.woff') format('woff'),
+        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.ttf') format('truetype'),
+        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.svg#Trajan Pro Regular') format('svg');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trajan Pro Regular', serif;
+    background: linear-gradient(135deg, #1a1c2c 0%, #2a4158 50%, #182848 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 0;
+}
+
+.content {
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #a5efff,
+                 0 0 20px #4FC1E9,
+                 0 0 30px #4FC1E9,
+                 0 0 40px #4FC1E9;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #E4F1FE;
+    text-shadow: 0 0 10px #4FC1E9,
+                 0 0 15px #4FC1E9;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+}
+
+.countdown {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin: 2.5rem 0;
+    padding: 2rem;
+    background: rgba(79, 193, 233, 0.1);
+    border: 2px solid rgba(165, 239, 255, 0.4);
+    border-radius: 20px;
+    white-space: nowrap;
+    backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    text-shadow: 0 0 15px #a5efff,
+                 0 0 25px #4FC1E9,
+                 0 0 35px #4FC1E9;
+    letter-spacing: 3px;
+    box-shadow: 0 0 20px rgba(79, 193, 233, 0.2),
+                inset 0 0 20px rgba(79, 193, 233, 0.1);
+}
+
+.side-image {
+    height: 80vh;
+    width: auto;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.side-image.left {
+    left: -5%;
+    transform: translateY(-50%) scaleX(-1); /* Flip the left image horizontally */
+}
+
+.side-image.right {
+    right: -5%;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .side-image {
+        height: 70vh;
+    }
+    
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    .countdown {
+        font-size: 2.2rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .content {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+    
+    .countdown {
+        font-size: 1.6rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .side-image {
+        height: 40vh;
+        position: fixed;
+        opacity: 0.6;
+    }
+    
+    .side-image.left {
+        left: -15%;
+        top: unset;
+        bottom: -5%;
+        transform: scaleX(-1);
+    }
+    
+    .side-image.right {
+        right: -15%;
+        top: -5%;
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .countdown {
+        font-size: 1.2rem;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    .side-image {
+        height: 35vh;
+    }
+    
+    .side-image.left {
+        left: -25%;
+        transform: scaleX(-1);
+    }
+    
+    .side-image.right {
+        right: -25%;
+        transform: none;
+    }
+}
