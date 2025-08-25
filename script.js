@@ -1,3 +1,52 @@
+// Confetti animation function
+function createConfettiBurst() {
+    // First burst from bottom-center
+    const start = () => {
+        const defaults = {
+            origin: { x: 0.5, y: 1 },
+            spread: 180,
+            ticks: 150,
+            gravity: 0.8,
+            decay: 0.95,
+            startVelocity: 35,
+            colors: ['#a864fd', '#29cdff', '#78ff44', '#ff718d', '#fdff6a', '#4FC1E9', '#a5efff'],
+            particleCount: 100,
+            scalar: 1.2
+        };
+
+        function shoot() {
+            // Center burst
+            confetti({
+                ...defaults,
+                angle: 90,
+                spread: 100,
+                particleCount: 80
+            });
+            
+            // Side bursts for fuller effect
+            confetti({
+                ...defaults,
+                angle: 120,
+                spread: 80,
+                particleCount: 40
+            });
+            
+            confetti({
+                ...defaults,
+                angle: 60,
+                spread: 80,
+                particleCount: 40
+            });
+        }
+
+        // Initial bursts
+        shoot();
+    };
+
+    // Start the animation when the page loads
+    start();
+}
+
 function updateCountdown() {
     const targetDate = new Date('2025-09-04T00:00:00');
     const currentDate = new Date();
@@ -25,5 +74,8 @@ function updateCountdown() {
 // Update countdown every second
 setInterval(updateCountdown, 1000);
 
-// Initial call to avoid delay
-updateCountdown();
+// Initial calls
+document.addEventListener('DOMContentLoaded', () => {
+    updateCountdown();
+    createConfettiBurst();
+});
