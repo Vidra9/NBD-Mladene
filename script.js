@@ -75,7 +75,8 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 
 // Initial calls
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     updateCountdown();
-    createConfettiBurst();
+    // Slight delay before confetti to ensure everything is rendered
+    setTimeout(createConfettiBurst, 100);
 });

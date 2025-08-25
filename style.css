@@ -1,11 +1,6 @@
 @font-face {
     font-family: 'Trajan Pro Regular';
-    src: url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.eot');
-    src: url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.eot?#iefix') format('embedded-opentype'),
-        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.woff2') format('woff2'),
-        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.woff') format('woff'),
-        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.ttf') format('truetype'),
-        url('https://db.onlinewebfonts.com/t/e19419b3f17584c393566269b4989191.svg#Trajan Pro Regular') format('svg');
+    src: url('./fonts/TrajanProRegular.ttf') format('truetype');
 }
 
 * {
