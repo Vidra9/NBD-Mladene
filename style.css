@@ -196,7 +196,7 @@ p {
     }
     
     .side-image.left {
-        left: 0;
+        left: -25%;
         transform: scaleX(1);
     }
     
