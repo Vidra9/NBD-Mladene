@@ -98,6 +98,16 @@ p {
     right: -5%;
 }
 
+.hornet-gif {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
     .side-image {
@@ -111,6 +121,10 @@ p {
     .countdown {
         font-size: 2.2rem;
         padding: 1.5rem;
+    }
+
+    .hornet-gif {
+        width: 80px;
     }
 }
 
@@ -157,6 +171,12 @@ p {
         top: -5%;
         transform: none;
     }
+
+    .hornet-gif {
+        width: 70px;
+        bottom: 15px;
+        right: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -182,5 +202,11 @@ p {
     .side-image.right {
         right: -25%;
         transform: none;
+    }
+    
+    .hornet-gif {
+        width: 60px;
+        bottom: 10px;
+        right: 10px;
     }
 }
