@@ -80,22 +80,24 @@ p {
 }
 
 .side-image {
-    height: 80vh;
+    height: 75vh;
     width: auto;
     position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 1;
     opacity: 0.9;
+    transition: transform 0.3s ease;
 }
 
 .side-image.left {
-    left: -5%;
-    transform: translateY(-50%) scaleX(-1); /* Flip the left image horizontally */
+    left: 0;
+    bottom: 0;
+    transform: scaleX(1);
 }
 
 .side-image.right {
-    right: -5%;
+    right: 0;
+    top: 0;
+    transform: scaleX(-1);
 }
 
 .hornet-gif {
@@ -111,7 +113,7 @@ p {
 /* Responsive design */
 @media (max-width: 1024px) {
     .side-image {
-        height: 70vh;
+        height: 65vh;
     }
     
     h1 {
@@ -160,20 +162,19 @@ p {
     }
     
     .side-image.left {
-        left: -15%;
-        top: unset;
-        bottom: -5%;
-        transform: scaleX(-1);
+        left: 0;
+        bottom: -2%;
+        transform: scaleX(1);
     }
     
     .side-image.right {
-        right: -15%;
-        top: -5%;
-        transform: none;
+        right: 0;
+        top: -2%;
+        transform: scaleX(-1);
     }
 
     .hornet-gif {
-        width: 70px;
+        width: 80px;
         bottom: 15px;
         right: 15px;
     }
@@ -195,17 +196,17 @@ p {
     }
     
     .side-image.left {
-        left: -25%;
-        transform: scaleX(-1);
+        left: 0;
+        transform: scaleX(1);
     }
     
     .side-image.right {
         right: -25%;
-        transform: none;
+        transform: scale(X(-1));
     }
     
     .hornet-gif {
-        width: 60px;
+        width: 80px;
         bottom: 10px;
         right: 10px;
     }
